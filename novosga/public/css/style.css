@@ -1,0 +1,530 @@
+/**
+ * Novo SGA - Main Style
+ * @author Pedro Marino <pedro-mvlima@hotmail.com>
+ */
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url('../fonts/Ubuntu-R.ttf');
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url('../fonts/Ubuntu-B.ttf');
+    font-weight : bold;
+}
+
+@font-face  {
+    font-family: "Ubuntu";
+    src: url('../fonts/Ubuntu-RI.ttf');
+    font-style : italic;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url('../fonts/Ubuntu-BI.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "UbuntuMono";
+    src: url('../fonts/UbuntuMono-R.ttf');
+}
+
+.chromeframe {
+    margin: 0;
+    background: #990000;
+    color: #eee;
+    padding: 5px 10px;
+}
+
+.chromeframe a { color: #fff; font-weight: bold; }
+
+#ajax-loading {
+    top: 10px;
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    z-index: 99999;
+}
+
+.mini-loading {
+    width: 40px;
+    height: 20px;
+    background-image: url(../images/loading.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    display: block;
+}
+
+/* navbar */
+.navbar-header {
+    padding: 5px 0 0 5px;
+}
+
+/* Logo da Prefeitura de Fortaleza - Tamanho Ampliado */
+.navbar-header .navbar-brand {
+    width: 300px !important; /* Aumentamos para dar espaço ao nome Fortaleza */
+    height: 60px !important; /* Aumentamos a altura */
+    margin-top: -5px !important; /* Ajuste para não ficar colado no topo */
+    background-image: url("../images/logo-prefeitura3.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: left center !important;
+    background-size: contain !important; /* Mantém a proporção sem cortar */
+    display: block !important;
+    text-indent: -9999px !important;
+    overflow: hidden !important;
+}
+
+body {
+    color: #333;
+    font-size: 14px;
+    font-family: Ubuntu, Helvetica, Arial, sans-serif;
+    line-height: 20px;
+}
+
+/* 1. COR DE FUNDO DA PÁGINA (Login e Atendimento) */
+body, 
+#layout, 
+#login, 
+.module-content {
+    background-color: #ffe6cb !important;
+}
+
+/* 2. CABEÇALHO (Barra Superior) */
+/* Precisamos atacar a navbar e o container interno dela */
+.navbar, 
+.navbar-default, 
+.navbar-inner, 
+.navbar-fixed-top {
+    background-color: #f15a22 !important;
+    background-image: none !important; /* Mata o degradê azul/cinza do Bootstrap */
+    border: none !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+}
+
+/* 3. TEXTO DO MENU (Marcação, Global, Guichê) */
+/* Como o fundo é laranja forte, as letras precisam ser brancas para aparecer */
+.navbar .nav > li > a, 
+.navbar-brand, 
+.navbar-text,
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff !important;
+    text-shadow: none !important;
+}
+
+/* 4. SETA DO DROPDOWN E NOME DO USUÁRIO */
+.navbar .nav li.dropdown > a .caret {
+    border-top-color: #ffffff !important;
+    border-bottom-color: #ffffff !important;
+}
+
+/* home */
+#home {
+    padding: 20px;
+}
+
+#home .welcome {
+    padding-bottom: 20px;
+}
+
+#home .welcome h1 {
+    margin: 0;
+    padding: 5px 0;
+}
+
+#home .modules h2 {
+    margin: 0;
+    padding: 5px 0;
+}
+
+#home p {
+    color: #999;
+    padding: 5px 0;
+}
+
+#home #modules-search {
+    top: 100px; 
+    right: 50px;
+    position: absolute; 
+}
+
+#home #modules .list {
+    padding-bottom: 10px;
+    clear: both;
+}
+
+#home #modules ul {
+    margin: 0;
+}
+
+#home #modules ul li {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+    list-style: none;
+    float: left;
+}
+
+#home #modules ul li a {
+    width: 100%;
+    float: left;
+}
+
+#home #modules ul li a img {
+    width: 48px;
+    height: 48px;
+    border: 0;
+}
+
+#home #modules ul li a span {
+    display: block;
+}
+
+/* error page */
+#error-page {
+    padding: 30px 50px;
+}
+
+#error-page h2 { padding: 30px 0 15px 0; }
+
+#footer {
+    clear: both;
+    padding: 40px;
+}
+
+#footer p {
+    color: #ccc;
+    text-align: right;
+}
+
+/* internal clock */
+#sga-clock {
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 15px;    
+    position: fixed;
+    background: #333;
+    border-radius: 5px;
+}
+
+#sga-clock span { 
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#sga-clock span.sep { width: 15px; }
+
+#sga-clock .time span {
+    color: #fff;
+    font-size: 20px;
+}
+
+#sga-clock .date { padding-top: 2px; }
+
+#sga-clock .date span {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* module layout */
+
+.module-content .header {
+    margin-bottom: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #CCC;
+}
+
+.module-content .header h2 {
+    color: #000000 !important;
+    padding: 5px 0 0 0;
+    margin: 0;
+}
+
+.module-content .header img {
+    width: 48px;
+    height: 48px;
+    margin: 5px 15px 0 5px;
+    float: left;
+}
+
+.module-content div.messages { padding-top: 10px; }
+
+/* search */
+.search {
+    padding: 10px 0 20px 0;
+}
+
+.search .btn-add {
+    float: right;
+}
+
+/* helper > form */
+.required-desc {
+    color: #ea852a;
+    padding: 5px 0 5px 20px;
+}
+
+div.field {
+    min-height: 25px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+div.field span.message.info {
+    color: #999999;
+}
+
+.required-desc,
+div.required label {
+    background-image: url(../images/icon-required.png);
+    background-repeat: no-repeat;
+}
+.required-desc { background-position: 0 center; }
+div.required label { 
+    background-position: left center;
+    padding-left: 20px;
+}
+
+div.buttons {
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    clear: both;
+}
+
+div.buttons span.btns {
+    padding-left: 10px;
+    float: left;
+}
+
+div.buttons p.required-desc {
+    margin-left: 20px;
+    float: left;
+}
+
+div.buttons .ui-button {
+    margin: 0 5px;
+}
+
+.servico-mestre { font-weight: bold; display: block; }
+.sub-servico { padding-left: 25px; display: block; }
+
+/* helper > table/report */
+table.ui-data-table {
+    width: 100%;
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table.ui-data-table th, table.ui-data-table td {
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #f1f1f1;
+}
+
+table.ui-data-table th {
+    padding: 5px 10px;
+    text-align: left;
+}
+
+table.ui-data-table td {
+    padding: 5px;
+    border-top: none !important;
+}
+
+table.ui-data-table tr.ui-state-hover, table.ui-data-table td.ui-state-hover {
+    border-left-width: 0 !important;
+    border-right-width: 0 !important;
+}
+
+table.ui-data-table td.ui-state-hover {
+    font-weight: normal !important;
+}
+
+table.ui-data-table tbody tr td { 
+    vertical-align: middle;
+}
+
+table.ui-data-table tbody tr td.btns { 
+    width: 1%;
+    white-space: nowrap;
+}
+
+table.ui-data-table tbody tr td.btns .ui-button { 
+    margin-left: 5px;
+}
+
+table.ui-data-table table { 
+    width: 100%;
+}
+
+table.ui-tree-view .num { 
+    width: 110px;
+}
+
+table.ui-tree-view .ui-tree-spacer { 
+    height: 22px;
+    float: left;
+}
+
+table.ui-tree-view .toggler { 
+    cursor: pointer;
+}
+
+table.ui-tree-view .toggler .ui-icon { 
+    padding-right: 5px;
+    float: right;
+}
+
+.nav-tabs {
+    margin-bottom: 15px !important;
+}
+
+.status-active { color: #468847; }
+.status-inactive { color: #b94a48; }
+
+.crud-pagination {
+    text-align: center;
+}
+
+td.buttons {
+    width:1%; 
+    white-space: nowrap;
+}
+
+#btn-delete {
+    float: right;
+}
+
+/* --- CUSTOMIZAÇÃO SANTA CASA DE FORTALEZA --- */
+
+/* Altera o fundo verde do painel para Laranja */
+.last-view, .bg-success, .panel-success > .panel-heading {
+    background-color: #E85A24 !important;
+    border-color: #E85A24 !important;
+}
+
+/* Altera a cor do texto da senha e guichê para Laranja */
+.senha, .label-success, .guiche .numero {
+    color: #E85A24 !important;
+}
+
+/* Ajuste opcional: se quiser que o relógio acompanhe o tema */
+#sga-clock {
+    background: #E85A24 !important;
+}
+
+/* FORÇAR TROCA DA LOGO DE LOGIN */
+body#login .logo img {
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+}
+
+body#login .logo, 
+.navbar-brand, 
+.navbar-header .navbar-brand {
+    background-image: url("../images/logo-prefeitura.png?v=2") !important; /* Mudei para v=2 para forçar o navegador a baixar a imagem nova */
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+}
+
+/* --- DESTAQUES EM LARANJA (MANTENDO TEXTO PRETO) --- */
+
+/* Botão 'Enviar' e outros botões de ação */
+.btn-primary, 
+.ui-button.ui-state-default.btn-primary,
+button[type="submit"] {
+    background-color: #336699 !important;
+    border-color: #336699 !important;
+    background-image: none !important;
+    color: #fff !important; /* Texto do botão sempre branco para leitura */
+}
+
+
+/* Altera a cor do nome do usuário no canto direito */
+.navbar-default .navbar-nav > li > a.dropdown-toggle {
+    color: #fff !important;
+    font-weight: bold !important; /* Engrossa a palavra */
+}
+
+
+/* Efeito ao passar o mouse: as letras podem ficar levemente mais claras ou laranja */
+.navbar-default .navbar-nav > li > a:hover {
+    color: #336699 !important; /* Destaque laranja apenas no hover */
+    font-weight: bold !important; /* Engrossa a palavra */
+}
+
+
+/* 1. ESTADO PADRÃO: LARANJA SEMPRE ACESO */
+.form-control, 
+#modules-search input, 
+input[type="text"] {
+    border-color: #f15a22 !important; /* Laranja da Santa Casa */
+    outline: 0 !important;
+    /* Brilho laranja constante */
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(241, 90, 34, .6) !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(241, 90, 34, .6) !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+/* 2. ESTADO DE FOCO: MUDA PARA AZUL AO CLICAR */
+.form-control:focus, 
+#modules-search input:focus, 
+input[type="text"]:focus {
+    border-color: #336699 !important; /* Azul do sistema */
+    /* Brilho azul ao clicar */
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 10px rgba(51, 102, 153, .8) !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 10px rgba(51, 102, 153, .8) !important;
+    outline: 0 !important;
+}
+
+/* TÍTULO PRINCIPAL (Atendimento) */
+.module-content .header h2 {
+    color: #414042 !important;
+}
+
+/* REMOVER O LARANJA QUE VEM DO SEU ARQUIVO ORIGINAL */
+/* O seu arquivo tem uma regra forçando .senha para laranja, isso mata o preto */
+.senha, .label-success, .senha .numero {
+    color: inherit !important;
+}
+
+
+/* 1. ESTADO NORMAL: LARANJA SANTA CASA */
+.atendimento .view .buttons .btn, 
+.btn-default, 
+.btn {
+    background-color: #f15a22 !important;
+    color: #ffffff !important;
+    border: none !important;
+    background-image: none !important;
+    transition: background-color 0.2s ease !important;
+}
+
+/* 2. ESTADO HOVER: LARANJA MAIS CLARO (SEM DESCONFIGURAR) */
+.atendimento .view .buttons .btn:hover, 
+.btn-default:hover, 
+.btn:hover {
+    background-color: #336699 !important; /* Laranja mais claro */
+    background-image: none !important;
+    color: #ffffff !important;
+}
+
+/* 3. AJUSTE PARA O ÍCONE NÃO SUMIR */
+.atendimento .view .buttons .btn img {
+    display: block !important;
+    margin: 0 auto 5px auto !important;
+}

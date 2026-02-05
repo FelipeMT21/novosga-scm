@@ -1,0 +1,12 @@
+# Ignorar arquivos temporários e caches (Isso está correto manter fora)
+/cache/
+/var/cache/
+/var/logs/
+/nbproject/
+.idea/
+.vscode/
+.DS_Store
+
+# ATENÇÃO:
+# Manter a config fora (Segurança), mas tenha backup manual dela!
+/config/
