@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('America/Fortaleza');
+session_save_path('/tmp');
 require_once  '../bootstrap.php';
 
 $app = Novosga\App::create();
